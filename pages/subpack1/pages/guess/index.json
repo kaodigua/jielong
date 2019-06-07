@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "看图猜成语",
+  "usingComponents": {
+    "dialog": "/component/dialog/index"
+  }
+}

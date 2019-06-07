@@ -1,45 +1,49 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/letters/letters",
-    "pages/book/books/books",
-    "pages/book/search/search",
-    "pages/book/book/book",
-    "pages/book/tang/main/main",
-    "pages/book/tang/poetry/poetry",
-    "pages/book/read/read"
+    "pages/interest/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
-    "tabBar": {
-        "selectedColor": "#1BB1A1",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "iconPath": "images/phrase-dk.png",
-                "selectedIconPath": "images/phrase-lt.png",
-                "text": "成语"
-            },
-            {
-                "pagePath": "pages/letters/letters",
-                "iconPath": "images/letters-dk.png",
-                "selectedIconPath": "images/letters-lt.png",
-                "text": "单词"
-            },
-            {
-                "pagePath": "pages/book/books/books",
-                "iconPath": "images/book-dk.png",
-                "selectedIconPath": "images/book-lt.png",
-                "text": "搜书"
-            }
-        ]
-    },
-    "networkTimeout": {
-        "request": 10000,
-        "downloadFile": 10000
+  "tabBar": {
+    "selectedColor": "#1BB1A1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/phrase-dk.png",
+        "selectedIconPath": "images/phrase-lt.png",
+        "text": "成语"
+      },
+      {
+        "pagePath": "pages/letters/letters",
+        "iconPath": "images/letters-dk.png",
+        "selectedIconPath": "images/letters-lt.png",
+        "text": "单词"
+      },
+      {
+        "pagePath": "pages/interest/index",
+        "iconPath": "images/book-dk.png",
+        "selectedIconPath": "images/book-lt.png",
+        "text": "有趣"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pages/subpack1/",
+      "pages":[
+        "pages/guess/index"
+      ]
     }
+  ],
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
 }

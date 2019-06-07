@@ -1,0 +1,5 @@
+<view class='container'>
+  <navigator url="../subpack1/pages/guess/index" class="navigator">
+    <image mode="widthFix" src="/images/guess.jpg"></image>
+  </navigator>
+</view>

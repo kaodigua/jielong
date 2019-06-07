@@ -1,0 +1,13 @@
+page {
+  background-color: #ECF0F3;
+}
+.container {
+  background-color: #ECF0F3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
