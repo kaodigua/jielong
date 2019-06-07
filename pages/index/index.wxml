@@ -1,0 +1,39 @@
+<!--pages/phrases/phrases.wxml-->
+<view class="container">
+  <view class='phrase-scroll-outer-con'>
+    <scroll-view class='phrase-scroll-con' scroll-y scroll-top="{{scrollTop}}">
+      <ad class="ad" unit-id="adunit-c20ee33f008567ad"></ad>
+      <view class='kong-wei' style='height:{{emptyHeight}}px'></view>
+      <view wx:for="{{phrases}}" wx:key="{{item.content}}" class="phrases-con">      
+        <view class='{{item.className}}'>
+          <view class='phrases-desc-icon-con'>
+            <image class='phrases-desc-icon' src='{{item.photoURI}}'></image>
+          </view>
+          <view class='phrases-desc-con' >
+            <text selectable='true' class='phrases-desc-text'>{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- <view>
+      <button class='suguest' send-message-title='宝贵建议' session-from="weapp" open-type="contact"></button>
+      <text class='suguest-txt'>建议</text>
+    </view> -->
+  </view>
+  <view class='input-con'>
+    <!-- <view class='input-tips-con'>
+      <block wx:for="{{tips}}" wx:key="{{item.whole}}">
+        <text class='tip-phrase' data-phrase='{{item.whole}}' bindtap='onClickItem'>{{item.simple}}</text>
+      </block>
+    </view> -->
+    <input class='word-input'  bindinput="onInputWord" bindconfirm="onClickBtn"  cursor-spacing="10" adjust-position="{{true}}" confirm-hold="true" value='{{inputWords}}' placeholder="请输入接龙成语" auto-focus/>
+    <button class='btn-tips' type="primary" size='mini' bindtap='onClickBtn'>{{btnTxt}}</button>
+  </view>
+
+  <complete 
+    score="{{counter}}" 
+    resultMsg="{{resultMsg}}" 
+    wx:if='{{isGameOver}}'
+    bind:confirm="onComfirm"
+  ></complete>
+</view>

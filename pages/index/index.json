@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "成语接龙",
+  "usingComponents": {
+    "complete": "../../component/complete/complete-panel"
+  }
+}

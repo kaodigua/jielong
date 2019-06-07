@@ -1,0 +1,90 @@
+<view class="container">
+    <view class="header clearfix">
+        <view class="score">{{score}}</view>
+        <view class="timer-wrapper {{timerStatus}}">
+            <view class="num">{{timerNumber}}</view>
+            <view class="left"></view>
+            <view class="right"></view>
+            <view class="rotate"></view>
+        </view>
+    </view>
+    <view class="main">
+      <scroll-view id="word-chain" scroll-y="true" scroll-top="{{scrollTop}}">
+        <view class="word-item-wrapper" wx:for="{{wordChain}}" wx:key="unique" wx:for-item="word">
+            <view class="word-item">
+                <text class="pre-word">{{word.preWord}}<text class="last-letter">{{word.lastLetter}}</text></text>
+                <view class="pass"></view>
+            </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view id="error-msg" wx:if="{{errorMsg !== ''}}">{{errorMsg}}</view>
+    <view class="input-wrapper">
+      <view type="text" id="answer-wrapper" class="focus">
+        <text id="answer-input">{{answer}}</text>
+      </view>
+      <text class="arrow" id="answer-btn" bindtap="responseAnswer">ok</text>
+    </view>
+    <view id="keyboard" class="" bindtap="writeAnswer" wx:if="{{!gameStart}}">
+        <view class="first-line clearfix">
+            <text data-letter="q">q</text>
+            <text data-letter="w">w</text>
+            <text data-letter="e">e</text>
+            <text data-letter="r">r</text>
+            <text data-letter="t">t</text>
+            <text data-letter="y">y</text>
+            <text data-letter="u">u</text>
+            <text data-letter="i">i</text>
+            <text data-letter="o">o</text>
+            <text data-letter="p">p</text>
+        </view>
+        <view class="second-line clearfix">
+            <text data-letter="a">a</text>
+            <text data-letter="s">s</text>
+            <text data-letter="d">d</text>
+            <text data-letter="f">f</text>
+            <text data-letter="g">g</text>
+            <text data-letter="h">h</text>
+            <text data-letter="j">j</text>
+            <text data-letter="k">k</text>
+            <text data-letter="l">l</text>
+        </view>
+        <view class="third-line clearfix">
+            <text data-letter="z">z</text>
+            <text data-letter="x">x</text>
+            <text data-letter="c">c</text>
+            <text data-letter="v">v</text>
+            <text data-letter="b">b</text>
+            <text data-letter="n">n</text>
+            <text data-letter="m">m</text>
+            <text class="del" data-letter="delete">删除</text>
+        </view>
+    </view>
+
+</view>
+<view class="end-modal" wx:if="{{gameStart}}">
+    <view class="modal-content">
+        <view class="rules">
+          <view class="rules-title">游戏规则</view>
+          <view class="rules-content">
+            <view>1.以上一个单词结尾字母开始</view>
+            <view>2.一场游戏中单词不能重复出现</view>
+            <view>3.每个接龙单词必须在规定时间内完成</view>
+            <view>4.每关加10个单词，看你能过多少关</view>
+          </view>
+        </view>
+        <button id="restart" bindtap="restart">开始游戏</button>
+    </view>
+</view>
+<view class="end-modal" wx:if="{{gameover}}">
+    <view class="modal-content">
+        <view class="modal-header">
+        {{resultMsg}}
+        </view>
+        <view wx:if="{{resultMsg!='GAME OVER!'}}" class="modal-header">恭喜你闯过第{{level}}关</view>
+        <view wx:else class="modal-header">闯第{{level}}关失败</view>
+        <view class="score">{{score}}</view>
+        <view>接龙长度</view>
+        <button id="restart" bindtap="restart">{{resultMsg!='GAME OVER!'?'下一关':'重来'}}</button>
+    </view>
+</view>

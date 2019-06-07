@@ -1,0 +1,15 @@
+<!--pages/book/tang/main.wxml-->
+<scroll-view>
+  <view class='sons'>
+    <view class="book-title">
+      <text>{{ poetry.title }}</text>
+    </view>
+    <view class='author'>
+      <text>{{ poetry.author }}</text>
+    </view>
+    <view class="content">
+      <text>{{ poetry.content }}</text>
+    </view>
+  
+  </view>
+</scroll-view>

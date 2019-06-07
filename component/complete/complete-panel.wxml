@@ -1,0 +1,11 @@
+<!--complete-panel.wxml-->
+<view class="end-modal">
+    <view class="modal-content">
+        <view class="modal-header">
+        {{resultMsg}}
+        </view>
+        <view class="score">{{score}}</view>
+        <view>接龙长度</view>
+        <button class="restart" bindtap="restart">再玩一次</button>
+    </view>
+</view>
