@@ -1,5 +1,10 @@
 <view class='container'>
   <navigator url="../subpack1/pages/guess/index" class="navigator">
-    <image mode="widthFix" src="/images/guess.jpg"></image>
+    <image class='icon' mode="widthFix" src="/images/guess.png"></image>
+    <text class='app-name'>看图猜成语</text>
+  </navigator>
+  <navigator url="../subpack2/pages/home/main" class="navigator">
+    <image class='icon' mode="widthFix" src="/images/shudu.png"></image>
+    <text class='app-name'>趣味数独</text>
   </navigator>
 </view>

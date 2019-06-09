@@ -1,0 +1,14 @@
+<view class="homePage">
+  <image class="_img data-v-74bbd6e3 bg" src="../../static/img/bg.png"></image>
+  <view class="wraps">
+    <view bindtap="handleProxy" class="_a data-v-74bbd6e3 enter_btn" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+      <image mode="widthFix" src="../../static/img/enter_4.png" class="_img data-v-74bbd6e3"></image>
+    </view>
+    <view bindtap="handleProxy" class="_a data-v-74bbd6e3 enter_btn" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+      <image mode="widthFix" src="../../static/img/enter_6.png" class="_img data-v-74bbd6e3"></image>
+    </view>
+    <view bindtap="handleProxy" class="_a data-v-74bbd6e3 enter_btn" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+      <image mode="widthFix" src="../../static/img/enter_9.png" class="_img data-v-74bbd6e3"></image>
+    </view>
+  </view>
+</view>

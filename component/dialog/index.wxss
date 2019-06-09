@@ -9,7 +9,7 @@
   min-height: 260rpx;
   border-radius: 20rpx;
   padding: 30rpx 20rpx;
-  background-color: #000;
+  background-color: rgba(10, 192, 238, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
