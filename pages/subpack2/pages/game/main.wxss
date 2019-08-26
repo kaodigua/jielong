@@ -1,0 +1,2 @@
+@import "../../static/css/app.wxss";
+@import "../../static/css/pages/game/main.wxss";

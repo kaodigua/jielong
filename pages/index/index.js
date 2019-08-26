@@ -298,7 +298,7 @@ Page({
     return {
       title: `成语接龙，让你快速掌握大量成语`,  
       path: '/pages/index/index',
-      imageUrl: "http://i1.bvimg.com/655596/6f0a38a51b2b08dd.jpg",  
+      imageUrl: "../../images/logo.jpg",  
       success: function (res) {
         var shareTickets = res.shareTickets;
         if (shareTickets.length == 0) {

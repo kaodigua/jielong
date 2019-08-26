@@ -39,6 +39,14 @@
       "pages":[
         "pages/guess/index"
       ]
+    },
+    {
+      "root": "pages/subpack2/",
+      "pages":[
+        "pages/home/main",
+        "pages/game/main",
+        "pages/result/main"
+      ]
     }
   ],
   "networkTimeout": {

@@ -144,9 +144,10 @@ page{
 .word-input{
   border: solid 1rpx #ccc;
   border-radius: 10rpx;
-  height: 100%;
+  height: 46rpx;
+  line-height: 46rpx;
   width: 490rpx;
-  padding: 10rpx;
+  padding: 6rpx;
   display:inline-block;
   vertical-align:center;
 }
